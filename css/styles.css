@@ -1,5 +1,5 @@
 :root {
-  --body-margin: 0 10vw;
+  --body-margin: 0 15vw;
   --body-background-color: rgb(34, 40, 49);
   --body-color: white;
   --body-font-family: Arial,sans-serif;
@@ -9,7 +9,11 @@
   --nav-anchor-margin: 0 1vw;
   --nav-background-color: rgb(34, 40, 49, 0.9);
 
-  --primary-color: #e7b56a;
+  --primary-color: yellowgreen;
+}
+
+html {
+  scroll-padding-top: 10vh;
 }
 
 body {
@@ -17,6 +21,7 @@ body {
   color: var(--body-color);
   margin: var(--body-margin);
   font-family: var(--body-font-family);
+  font-size: var(--paragraph-font-size);
 }
 
 p {
@@ -42,6 +47,7 @@ nav a {
 nav h3:hover {
   text-decoration: underline;
   color: var(--primary-color);
+  transition: 0.5s;
 }
 nav h3 {
   font-weight: lighter;
@@ -49,6 +55,11 @@ nav h3 {
 nav h1 {
   font-size: 3rem;
 }
+
+.my-name {
+  color: var(--primary-color);
+}
+
 
 .contact-container {
   float: left;
@@ -81,10 +92,14 @@ nav h1 {
   width: 40px;
 }
 
+.section {
+
+}
+
 .my-image {
-  border-radius: 20em 0 20em 0;
+  border-radius: 15em 0 15em 0;
   display: block;
-  height: 60vh;
+  height: 65vh;
   pointer-events: none;
 }
 
@@ -107,6 +122,24 @@ nav h1 {
 
 .intro .text {
   margin: 2rem;
+}
+
+.skill-list {
+  list-style: none;
+}
+
+.skill-list li {
+  display: inline-block;
+  background-color: lightgrey;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1.5rem;
+  color: black
+}
+
+.skill-list li:hover {
+  background-color: yellowgreen;
+  transition: 0.5s;
 }
 
 .sec,.sec2 {
@@ -183,6 +216,7 @@ nav h1 {
 .Button:hover {
 	background-color: var(--primary-color);
   transform: scale(1.1);
+  transition: 0.5s;
 }
 .Button:active {
 	position:relative;

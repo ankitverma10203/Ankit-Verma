@@ -4,7 +4,7 @@
   --body-color: white;
   --body-font-family: Arial, sans-serif;
 
-  --paragraph-font-size: 1.5rem;
+  --paragraph-font-size: 1.2rem;
 
   --nav-anchor-margin: 0 1vw;
   --nav-background-color: rgb(34, 40, 49, 0.9);
@@ -14,7 +14,7 @@
 
 html {
   scroll-padding-top: 10vh;
-  min-width: 500px;
+  min-width: 300px;
 }
 
 body {
@@ -65,7 +65,6 @@ nav h1 {
 
 
 .contact-container {
-  float: left;
   position: absolute;
   position: fixed;
   display: flex;
@@ -109,9 +108,10 @@ nav h1 {
 }
 
 .intro {
-  min-height: calc(100vh - 10vh);
-  margin: 2vh 0;
+  min-height: calc(100vh - 10vh - 4vh);
+  margin: 4vh 0;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 }
 
@@ -304,7 +304,25 @@ footer img {
   body {
     margin: 0 5vw;
   }
-  .my-image {
-    display: none;
+  /* .my-image {
+    height: 20rem;
+  } */
+  .intro {
+    flex-direction: column;
+  }
+  .contact-container {
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+  .contact-link {
+    display: inline-block;
   }
 }

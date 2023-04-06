@@ -96,6 +96,7 @@ nav a:hover {
 
 .intro h1 {
   font-size: 3rem;
+  color: var(--body-color);
 }
 
 .intro {

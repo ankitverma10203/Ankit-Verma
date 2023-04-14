@@ -2,7 +2,7 @@
   --body-margin: 0 15vw;
   --body-background-color: rgb(34, 40, 49);
   --body-color: white;
-  --body-font-family: Arial,sans-serif;
+  --body-font-family: Arial, sans-serif;
 
   --paragraph-font-size: 1.5rem;
 
@@ -14,6 +14,8 @@
 
 html {
   scroll-padding-top: 10vh;
+  min-width: 300px;
+  margin: 0;
 }
 
 body {
@@ -24,8 +26,8 @@ body {
   font-size: var(--paragraph-font-size);
 }
 
-p {
-  font-size: var(--paragraph-font-size);
+h1 {
+  color: var(--primary-color);
 }
 
 nav {
@@ -34,6 +36,7 @@ nav {
   display: flex;
   top: 0;
   justify-content: end;
+  padding: 2vh;
   background-color: var(--nav-background-color);
 }
 
@@ -44,42 +47,24 @@ nav a {
   color: white;
 }
 
-nav h3:hover {
+nav a:hover {
   text-decoration: underline;
   color: var(--primary-color);
   transition: 0.5s;
-}
-nav h3 {
-  font-weight: lighter;
-}
-nav h1 {
-  font-size: 3rem;
 }
 
 .my-name {
   color: var(--primary-color);
 }
 
-
 .contact-container {
-  float: left;
-  position:absolute;
-  position:fixed;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  top: 0;
-  left: 0;
-  height: 100vh;
-}
-
-.contact {
-  background-color: white;
-  border-radius: 1rem;
+  width: 100%;
 }
 
 .contact-link {
-  display: block;
+  display: inline-block;
   margin: 0.5rem;
 }
 
@@ -88,29 +73,32 @@ nav h1 {
 }
 
 .contact-icon {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
+  fill: white;
 }
 
-.section {
-
+.contact-icon:hover {
+  fill: var(--primary-color);
 }
 
 .my-image {
   border-radius: 10em 0 10em 0;
   display: block;
-  height: 65vh;
+  height: 30rem;
   pointer-events: none;
 }
 
 .intro h1 {
   font-size: 3rem;
+  color: var(--body-color);
 }
 
 .intro {
-  min-height: calc(100vh - 10vh);
-  margin: 2vh 0;
+  min-height: calc(100vh - 10vh - 4vh);
+  margin: 4vh 0;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 }
 
@@ -128,6 +116,10 @@ nav h1 {
   list-style: none;
 }
 
+#skills ul {
+  padding-inline-start: 0;
+}
+
 .skill-list li {
   display: inline-block;
   background-color: lightgrey;
@@ -142,132 +134,59 @@ nav h1 {
   transition: 0.5s;
 }
 
-.sec,.sec2 {
-   overflow: auto;
- }
-.background_img {
-  position: absolute;
-}
-.img1 {
-  left:0;
-  opacity: 0.5;
-  z-index: -1;
-}
-.img2 {
-  right:0 ;
-  opacity: 0.5;
-  z-index: -1;
-}
-.img3 {
-  left:0;
-  opacity: 0.5;
-  z-index: -1;
-}
-.img4 {
-  right:0;
-  z-index: -1;
-}
-.img5 {
-  left:0;
-  z-index: -1;
-}
-.img6 {
-  right:0;
-  width:30vw;
-  z-index: -1;
-}
-.img7 {
-  left:0;
-  z-index: -1;
-}
-.img8 {
-  right:0;
-  z-index: -1;
-}
-.img9 {
-  left:0 ;
-  width: 30vw;
-  z-index: -1;
-}
-/* .text{
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-} */
-
-.description .text,.sec2 .text {
-  text-align: justify;
-}
-
 .Button {
-	box-shadow: 0px 4px 10px -1px black;
-	background-color:#eeeeee;
-	border-radius:28px;
-	border:1px solid black;
-	display:inline-block;
-	cursor:pointer;
-	color:black;
-	font-family:Arial;
-	font-size:17px;
-	padding:14px 20px;
-	text-decoration:none;
+  box-shadow: 0px 4px 10px -1px black;
+  background-color: #eeeeee;
+  border-radius: 28px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 14px 20px;
+  text-decoration: none;
   transition: 0.2s;
-  margin:2vw;
+  margin: 2vw;
 }
+
 .Button:hover {
-	background-color: var(--primary-color);
+  background-color: var(--primary-color);
   transform: scale(1.1);
   transition: 0.5s;
 }
+
 .Button:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
-.sec img {
-  float: left;
-  display: block;
-}
-.sec2 img {
-  float: right;
-  display: block;
-}
-.image_block {
-  display: inline-block;
-  padding: 5%;
-}
-.image_block img {
-  height: 10%;
-}
-.bottom_mid, .footer {
+.center-align {
   text-align: center;
   padding: 1vw;
 }
-.review {
-  position: relative;
-  text-align: center;
-}
-.review img {
-  width: 10%;
-  position: absolute;
-}
-.quote_img1 {
-  top: -35%;
-  left: -0%;
-}
-.quote_img2 {
-  bottom: -35%;
-  right: 0%;
-}
-footer img {
-  width:100%;
-}
-.name {
-  text-align: right;
-  font-weight: bold;
-}
-.quote {
-  text-align: center;
-  width: 32%;
-  display: inline-block;
-  padding: 5%;
+
+@media screen and (max-width: 1000px) {
+  body {
+    margin: 0 5vw;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .my-image {
+    border-radius: 5em 0 5em 0;
+    width: 50vw;
+    height: auto;
+  }
+
+  .intro {
+    min-height: fit-content;
+    flex-direction: column;
+  }
+
+  :root {
+    --paragraph-font-size: 1.2rem;
+  }
 }

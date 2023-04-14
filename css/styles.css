@@ -4,7 +4,7 @@
   --body-color: white;
   --body-font-family: Arial, sans-serif;
 
-  --paragraph-font-size: 1.2rem;
+  --paragraph-font-size: 1.5rem;
 
   --nav-anchor-margin: 0 1vw;
   --nav-background-color: rgb(34, 40, 49, 0.9);
@@ -58,23 +58,13 @@ nav a:hover {
 }
 
 .contact-container {
-  position: absolute;
-  position: fixed;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  top: 0;
-  left: 0;
-  height: 100vh;
-}
-
-.contact {
-  background-color: white;
-  border-radius: 1rem;
+  width: 100%;
 }
 
 .contact-link {
-  display: block;
+  display: inline-block;
   margin: 0.5rem;
 }
 
@@ -83,8 +73,13 @@ nav a:hover {
 }
 
 .contact-icon {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
+  fill: white;
+}
+
+.contact-icon:hover {
+  fill: var(--primary-color);
 }
 
 .my-image {
@@ -191,11 +186,7 @@ nav a:hover {
     flex-direction: column;
   }
 
-  .contact-container {
-    display: none;
-  }
-
-  .contact-link {
-    display: inline-block;
+  :root {
+    --paragraph-font-size: 1.2rem;
   }
 }

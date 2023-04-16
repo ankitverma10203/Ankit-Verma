@@ -35,6 +35,7 @@ nav {
   position: sticky;
   position: -webkit-sticky;
   display: flex;
+  flex-wrap: wrap;
   top: 0;
   justify-content: center;
   padding: 2vh;
@@ -104,14 +105,8 @@ nav a:hover {
   align-items: center;
 }
 
-.intro::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.intro .text {
-  margin: 2rem;
+section, .text {
+  margin: 1rem;
 }
 
 .skill-list {

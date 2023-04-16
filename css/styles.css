@@ -54,7 +54,7 @@ nav a:hover {
   transition: 0.5s;
 }
 
-.my-name {
+.higlight-text {
   color: var(--primary-color);
 }
 

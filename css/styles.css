@@ -16,6 +16,7 @@ html {
   scroll-padding-top: 10vh;
   min-width: 300px;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,13 +36,14 @@ nav {
   position: -webkit-sticky;
   display: flex;
   top: 0;
-  justify-content: end;
+  justify-content: center;
   padding: 2vh;
   background-color: var(--nav-background-color);
 }
 
 nav a {
   display: inline-block;
+  white-space: nowrap;
   margin: var(--nav-anchor-margin);
   text-decoration: none;
   color: white;
@@ -53,7 +55,7 @@ nav a:hover {
   transition: 0.5s;
 }
 
-.my-name {
+.higlight-text {
   color: var(--primary-color);
 }
 
@@ -169,10 +171,6 @@ nav a:hover {
 @media screen and (max-width: 1000px) {
   body {
     margin: 0 5vw;
-  }
-
-  nav {
-    justify-content: space-between;
   }
 
   .my-image {
